@@ -4,7 +4,6 @@
   var App = window.App || {};
 
   function DataStore() {
-
     this.data = {};
   }
 
