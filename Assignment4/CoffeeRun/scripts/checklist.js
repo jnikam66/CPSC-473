@@ -31,9 +31,10 @@
 
   CheckList.prototype.removeRow = function(email) {
     this.$element
-      .find("[value=' + email + ']")
+      .find("[value='" + email + "']")
       .closest("[data-coffee-order='checkbox']")
       .remove();
+    //  App.remoteDS.remove(email);
   };
 
   function Row(coffeeOrder) {
@@ -45,7 +46,7 @@
 
     var $checkbox = $("<input></input>", {
       type: "checkbox",
-      value: coffeeOrder.emailAddress
+      value: coffeeOrder.id
     });
     var description = coffeeOrder.size + " ";
     if (coffeeOrder.flavor) {
